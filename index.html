@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Exam Solution Code</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <main>
+        <h1>Clever Cookie Bakery</h1>
+        <h2>
+            We have several cookie flavors available. Yum!<br>Tell us what you'd like!
+        </h2>
+        <section>
+            <div class="menu">
+                <h3>Ginger Bread</h3>
+                <img src="assets/images/gingerbread.png" alt="Ginger bread cookie">
+                <div class="button-container">
+                    <button id="minus-gb">-</button>
+                    <button id="add-gb">+</button>
+                </div>
+            </div>
+            <div class="menu">
+                <h3>Chocolate Chip</h3>
+                <img src="assets/images/choc-chip.png" alt="chocolate chip cookie">
+                <div class="button-container">
+                    <button id="minus-cc">-</button>
+                    <button id="add-cc">+</button>
+                </div>
+            </div>
+            <div class="menu">
+                <h3>Sugar Sprinkle</h3>
+                <img src="assets/images/sugar-cookie.png" alt="Sugar Sprinkle Cookie">
+                <div class="button-container">
+                    <button id="minus-sugar">-</button>
+                    <button id="add-sugar">+</button>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <div class="summary">
+            <h2>Order Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Cookie Type
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ginger Bread</td>
+                        <td id="qty-gb">0</td>
+                    </tr>
+                    <tr>
+                        <td>Chocolate Chip</td>
+                        <td id="qty-cc">0</td>
+                    </tr>
+                    <tr>
+                        <td>Sugar Sprinkle</td>
+                        <td id="qty-sugar">0</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th id="qty-total">0</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <footer>
+        Image credit: <a href="https://pixabay.com/vectors/anthropomorphic-cookie-decoration-1297309/">gingerbread cookie</a>, <a href="https://pixabay.com/vectors/cookie-chocolate-chips-bakery-154366/">chocolate chip cookie</a>, and <a href="https://pixabay.com/vectors/candy-dessert-cookie-jelly-bean-1348480/">sugar sprinkle cookie</a> are all from PixaBay. <a href="https://unsplash.com/photos/QnNqGoCnBg0">Background bakery image</a> from Unsplash.
+    </footer>
+    <script src="assets/script.js"></script>
+</body>
+</html>

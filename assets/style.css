@@ -1,0 +1,96 @@
+/* Page Section Styles */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url('./images/bakery-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    position:relative;
+    color: saddlebrown;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    margin: 0 10px;
+}
+
+section {
+    border: 1px dashed saddlebrown;
+    padding: 10px;
+}
+
+section .menu {
+    display: inline-block;
+    border: 1px solid saddlebrown;
+    padding: 10px;
+    background-color: burlywood;
+    border-radius: 5px;
+}
+
+/* Text Styles */
+h1 {
+    color: darkred;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3.5em;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.6em;
+    background-color: bisque;
+    display: inline-block;
+    border: 1px solid saddlebrown;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin: 2px;
+}
+
+/* Table Styles */
+table {
+    border: 1px solid saddlebrown;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+}
+
+th {
+    background-color: burlywood;
+}
+
+td {
+    background-color: bisque;
+}
+
+th, 
+td {
+    padding: 5px;
+    border: 1px solid saddlebrown;
+}
+
+/* Button Styles */
+button {
+    color: saddlebrown;
+    background-color: burlywood;
+    font-size: 1.5em;
+}
+
+/* Footer Styles */
+footer {
+    position: sticky;
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+    padding: 20px 0;
+    background-color: burlywood;
+}
+
+body::after {
+    display: block;
+    height: 150px;
+}
