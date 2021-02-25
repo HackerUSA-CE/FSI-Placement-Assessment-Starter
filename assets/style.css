@@ -52,6 +52,10 @@ h3 {
     margin: 2px;
 }
 
+#credit {
+    margin-bottom: 50px;
+}
+
 /* Table Styles */
 table {
     border: 1px solid saddlebrown;
