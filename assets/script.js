@@ -1,27 +1,81 @@
-// HINT: You can delete this console.log after you no longer need it!
-console.log('JavaScript code has loaded!')
-// First, tell us your name
-let yourName = "Jane Doe" // HINT: Replace this with your own name!
+let yourName = "Dimitri Taoko";
 
-// We'll use these variables to track the counts of each cookie type
-let gb = 0 // Gingerbread
-let cc = 0 // Chocolate Chip
-let sugar = 0 // Sugar Sprinkle
+/**
+ * Select element with id value set to credit & set text
+ */
+document.getElementById("credit").textContent = `Created by ${yourName}`
 
-// selecting the element with an id of credit
-const credit = document.querySelector('#credit')
-// selecting the element with an id of add-gb
-const gbPlusBtn = document.querySelector('#add-gb')
+/**
+  * Query assortment of cookies' [+] and [-] buttons by their unique id values.
+*/
+const addGingerBread = document.getElementById("add-gb")
+const subGingerBread = document.getElementById("minus-gb")
 
-// Code to update name display
-credit.textContent = `Created by ${yourName}`
+const addChocolateChip = document.getElementById("add-cc")
+const subChocolateChip = document.getElementById("minus-cc")
 
-// Event listener for clicks on the "+" button for Gingerbread cookies
-gbPlusBtn.addEventListener('click', function() {
-// HINT: You can delete this console.log after you no longer need it!
-console.log('Gingerbread + button was clicked!')
+const addSugarSprinkle = document.getElementById("add-sugar")
+const subSugarSprinkle = document.getElementById("minus-sugar")
 
-// TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
+/**
+  * Create a table of property:values along with their corresponding elements from the
+  * order summary table to be updated when the corresponding values change.
+  */
+const orderSummary = {
+  cookies: [
+    { type: "Gingerbread", total: 0, element: document.getElementById("qty-gb") },
+    { type: "Chocolate Chip", total: 0, element: document.getElementById("qty-cc") },
+    { type: "Sugar Sprinkle", total: 0, element: document.getElementById("qty-sugar") }
+  ],
+  total: { value: 0, element: document.getElementById("qty-total") }
+};
+
+/**
+  * Function to update the quantities and totals in the order summary
+  */
+const updateOrderTotal = function (cookieType, increment) {
+  let newTotal = 0;
+
+  orderSummary["cookies"].forEach(function (cookie) {
+    if (cookie.type === cookieType) {
+      let newQty = cookie.total + increment
+
+      cookie.total = newQty
+      cookie.element.textContent = newQty
+    }
+    newTotal = newTotal + cookie.total;
+  })
+
+  orderSummary.total.value = newTotal
+  orderSummary.total.element.textContent = newTotal
+}
+
+/**
+  * For each of the queried buttons, add in a listener function
+  * such that every click is reflected by the corresponding variables.
+  */
+addGingerBread.addEventListener("click", function (event) {
+  console.log("Gingerbread + button clicked!")
+
+  updateOrderTotal("Gingerbread", 1)
 })
-
-// TODO: Hook up event listeners for the rest of the buttons
+subGingerBread.addEventListener("click", function (event) {
+  console.log("Gingerbread - button clicked!")
+  updateOrderTotal("Gingerbread", -1)
+})
+addChocolateChip.addEventListener("click", function (event) {
+  console.log("Chocolate Chip + button clicked!")
+  updateOrderTotal("Chocolate Chip", 1)
+})
+subChocolateChip.addEventListener("click", function (event) {
+  console.log("Chocolate Chip - button clicked!")
+  updateOrderTotal("Chocolate Chip", -1)
+})
+addSugarSprinkle.addEventListener("click", function (event) {
+  console.log("Sugar Sprinkle + button clicked!")
+  updateOrderTotal("Sugar Sprinkle", 1)
+})
+subSugarSprinkle.addEventListener("click", function (event) {
+  console.log("Sugar Sprinkle - button clicked!")
+  updateOrderTotal("Sugar Sprinkle", -1)
+});
