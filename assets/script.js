@@ -38,8 +38,8 @@ const updateOrderTotal = function (cookieType, increment) {
     if (cookie.type === cookieType) {
       let newQty = cookie.total + increment
 
-      cookie.total = newQty
-      cookie.element.textContent = newQty
+      cookie.total = newQty >= 0 ? newQty : cookie.total
+      cookie.element.textContent = cookie.total
     }
     newTotal = newTotal + cookie.total;
   })
