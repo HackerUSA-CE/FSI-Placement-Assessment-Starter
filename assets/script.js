@@ -19,7 +19,7 @@ credit.textContent = `Created by ${yourName}`
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbPlusBtn.addEventListener('click', function() {
 // HINT: You can delete this console.log after you no longer need it!
-console.log('Gingerbread + button was clicked!')
+console.log('Gingerbread + button was tapped!')
 
 // TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
 })
